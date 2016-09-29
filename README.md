@@ -1,5 +1,7 @@
 # Import For Me
 
+<img src="/robin/ImportForMe/raw/master/screenshot.gif" width=458>
+
 Xcode Source Editor Extension to add an import line without jumping to the head of file.
 
 Sometime when you are busy at typing some coolest swift code in the word but find you need to import a missing module, you have to jump to the head of file, import it and lose yourself in no where.
