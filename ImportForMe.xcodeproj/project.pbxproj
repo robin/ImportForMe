@@ -13,6 +13,10 @@
 		AEBF0BF31D9CC0B6001A36AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEBF0BF11D9CC0B6001A36AC /* Main.storyboard */; };
 		AEBF0BFE1D9CC0B6001A36AC /* ImportForMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF0BFD1D9CC0B6001A36AC /* ImportForMeTests.swift */; };
 		AEBF0C091D9CC0B6001A36AC /* ImportForMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF0C081D9CC0B6001A36AC /* ImportForMeUITests.swift */; };
+		AEBF0C1D1D9CC0DB001A36AC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBF0C1C1D9CC0DB001A36AC /* Cocoa.framework */; };
+		AEBF0C221D9CC0DB001A36AC /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF0C211D9CC0DB001A36AC /* SourceEditorExtension.swift */; };
+		AEBF0C241D9CC0DB001A36AC /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBF0C231D9CC0DB001A36AC /* SourceEditorCommand.swift */; };
+		AEBF0C281D9CC0DB001A36AC /* Import For Me.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AEBF0C1A1D9CC0DB001A36AC /* Import For Me.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +34,28 @@
 			remoteGlobalIDString = AEBF0BE71D9CC0B6001A36AC;
 			remoteInfo = ImportForMe;
 		};
+		AEBF0C261D9CC0DB001A36AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AEBF0BE01D9CC0B6001A36AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AEBF0C191D9CC0DB001A36AC;
+			remoteInfo = ImportForMeExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AEBF0C2C1D9CC0DB001A36AC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AEBF0C281D9CC0DB001A36AC /* Import For Me.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AEBF0BE81D9CC0B6001A36AC /* ImportForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImportForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +70,12 @@
 		AEBF0C041D9CC0B6001A36AC /* ImportForMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImportForMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEBF0C081D9CC0B6001A36AC /* ImportForMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportForMeUITests.swift; sourceTree = "<group>"; };
 		AEBF0C0A1D9CC0B6001A36AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEBF0C1A1D9CC0DB001A36AC /* Import For Me.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Import For Me.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEBF0C1C1D9CC0DB001A36AC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AEBF0C201D9CC0DB001A36AC /* ImportForMeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ImportForMeExtension.entitlements; sourceTree = "<group>"; };
+		AEBF0C211D9CC0DB001A36AC /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		AEBF0C231D9CC0DB001A36AC /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		AEBF0C251D9CC0DB001A36AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +100,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEBF0C171D9CC0DB001A36AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBF0C1D1D9CC0DB001A36AC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +117,8 @@
 				AEBF0BEA1D9CC0B6001A36AC /* ImportForMe */,
 				AEBF0BFC1D9CC0B6001A36AC /* ImportForMeTests */,
 				AEBF0C071D9CC0B6001A36AC /* ImportForMeUITests */,
+				AEBF0C1E1D9CC0DB001A36AC /* ImportForMeExtension */,
+				AEBF0C1B1D9CC0DB001A36AC /* Frameworks */,
 				AEBF0BE91D9CC0B6001A36AC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +129,7 @@
 				AEBF0BE81D9CC0B6001A36AC /* ImportForMe.app */,
 				AEBF0BF91D9CC0B6001A36AC /* ImportForMeTests.xctest */,
 				AEBF0C041D9CC0B6001A36AC /* ImportForMeUITests.xctest */,
+				AEBF0C1A1D9CC0DB001A36AC /* Import For Me.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +164,33 @@
 			path = ImportForMeUITests;
 			sourceTree = "<group>";
 		};
+		AEBF0C1B1D9CC0DB001A36AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF0C1C1D9CC0DB001A36AC /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEBF0C1E1D9CC0DB001A36AC /* ImportForMeExtension */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF0C211D9CC0DB001A36AC /* SourceEditorExtension.swift */,
+				AEBF0C231D9CC0DB001A36AC /* SourceEditorCommand.swift */,
+				AEBF0C251D9CC0DB001A36AC /* Info.plist */,
+				AEBF0C1F1D9CC0DB001A36AC /* Supporting Files */,
+			);
+			path = ImportForMeExtension;
+			sourceTree = "<group>";
+		};
+		AEBF0C1F1D9CC0DB001A36AC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF0C201D9CC0DB001A36AC /* ImportForMeExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,10 +201,12 @@
 				AEBF0BE41D9CC0B6001A36AC /* Sources */,
 				AEBF0BE51D9CC0B6001A36AC /* Frameworks */,
 				AEBF0BE61D9CC0B6001A36AC /* Resources */,
+				AEBF0C2C1D9CC0DB001A36AC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AEBF0C271D9CC0DB001A36AC /* PBXTargetDependency */,
 			);
 			name = ImportForMe;
 			productName = ImportForMe;
@@ -178,6 +249,23 @@
 			productReference = AEBF0C041D9CC0B6001A36AC /* ImportForMeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		AEBF0C191D9CC0DB001A36AC /* ImportForMeExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEBF0C291D9CC0DB001A36AC /* Build configuration list for PBXNativeTarget "ImportForMeExtension" */;
+			buildPhases = (
+				AEBF0C161D9CC0DB001A36AC /* Sources */,
+				AEBF0C171D9CC0DB001A36AC /* Frameworks */,
+				AEBF0C181D9CC0DB001A36AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImportForMeExtension;
+			productName = ImportForMeExtension;
+			productReference = AEBF0C1A1D9CC0DB001A36AC /* Import For Me.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,7 +278,6 @@
 				TargetAttributes = {
 					AEBF0BE71D9CC0B6001A36AC = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = YMZ2R5RGSC;
 						ProvisioningStyle = Automatic;
 					};
 					AEBF0BF81D9CC0B6001A36AC = {
@@ -204,6 +291,10 @@
 						DevelopmentTeam = YMZ2R5RGSC;
 						ProvisioningStyle = Automatic;
 						TestTargetID = AEBF0BE71D9CC0B6001A36AC;
+					};
+					AEBF0C191D9CC0DB001A36AC = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -223,6 +314,7 @@
 				AEBF0BE71D9CC0B6001A36AC /* ImportForMe */,
 				AEBF0BF81D9CC0B6001A36AC /* ImportForMeTests */,
 				AEBF0C031D9CC0B6001A36AC /* ImportForMeUITests */,
+				AEBF0C191D9CC0DB001A36AC /* ImportForMeExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +337,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		AEBF0C021D9CC0B6001A36AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEBF0C181D9CC0DB001A36AC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +378,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEBF0C161D9CC0DB001A36AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEBF0C221D9CC0DB001A36AC /* SourceEditorExtension.swift in Sources */,
+				AEBF0C241D9CC0DB001A36AC /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +399,11 @@
 			isa = PBXTargetDependency;
 			target = AEBF0BE71D9CC0B6001A36AC /* ImportForMe */;
 			targetProxy = AEBF0C051D9CC0B6001A36AC /* PBXContainerItemProxy */;
+		};
+		AEBF0C271D9CC0DB001A36AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AEBF0C191D9CC0DB001A36AC /* ImportForMeExtension */;
+			targetProxy = AEBF0C261D9CC0DB001A36AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,9 +512,11 @@
 		AEBF0C0E1D9CC0B6001A36AC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YMZ2R5RGSC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImportForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robinlu.ImportForMe;
@@ -413,9 +528,11 @@
 		AEBF0C0F1D9CC0B6001A36AC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = YMZ2R5RGSC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ImportForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.robinlu.ImportForMe;
@@ -486,6 +603,40 @@
 			};
 			name = Release;
 		};
+		AEBF0C2A1D9CC0DB001A36AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ImportForMeExtension/ImportForMeExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ImportForMeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robinlu.ImportForMe.ImportForMeExtension;
+				PRODUCT_NAME = "Import For Me";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AEBF0C2B1D9CC0DB001A36AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ImportForMeExtension/ImportForMeExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ImportForMeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.robinlu.ImportForMe.ImportForMeExtension;
+				PRODUCT_NAME = "Import For Me";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +656,7 @@
 				AEBF0C0F1D9CC0B6001A36AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEBF0C101D9CC0B6001A36AC /* Build configuration list for PBXNativeTarget "ImportForMeTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +665,7 @@
 				AEBF0C121D9CC0B6001A36AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEBF0C131D9CC0B6001A36AC /* Build configuration list for PBXNativeTarget "ImportForMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +674,16 @@
 				AEBF0C151D9CC0B6001A36AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBF0C291D9CC0DB001A36AC /* Build configuration list for PBXNativeTarget "ImportForMeExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBF0C2A1D9CC0DB001A36AC /* Debug */,
+				AEBF0C2B1D9CC0DB001A36AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
