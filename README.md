@@ -1,6 +1,6 @@
 # Import For Me
 
-<img src="/robin/ImportForMe/raw/master/screenshot.gif" width=458>
+<img src="/screenshot.gif" width=458>
 
 Xcode Source Editor Extension to add an import line without jumping to the head of file.
 
