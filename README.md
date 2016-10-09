@@ -14,4 +14,5 @@ This little extension will save you. Just typing the module name in a new line a
 2. Open the project in Xcode 8.0 or later.
 3. Resolve the code sign issues
 4. Build and run.
-5. You will find the command in the Editor Menu.
+5.  -> System Preferences -> Extensions -> Xcode Source Editor -> Enable Import For Me
+6. You will find the command in the Editor Menu.
