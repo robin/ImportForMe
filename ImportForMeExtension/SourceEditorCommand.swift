@@ -14,19 +14,23 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
         // Implement your command here, invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         
-        var lastImportLine = 0
-        let regex = try! NSRegularExpression(pattern: "^\\s*import\\s*\\w", options: [])
-        for (i, line) in invocation.buffer.lines.enumerated() {
-            if let buffer = line as? String {
-                if let result = regex.firstMatch(in: buffer, options: [], range: buffer.fullRange) {
-                    if result.range.location != NSNotFound {
-                        lastImportLine = i
+        let lastWordRegex = try! NSRegularExpression(pattern: "\\s*([\\w.]+)\\W*$", options: [])
+        if let range = invocation.buffer.selections[0] as? XCSourceTextRange {
+            var lastImportLine = 0
+            let regex = try! NSRegularExpression(pattern: "^\\s*import\\s*\\w", options: [])
+            for (i, line) in invocation.buffer.lines.enumerated() {
+                if i == range.start.line {
+                    continue
+                }
+                if let buffer = line as? String {
+                    if let result = regex.firstMatch(in: buffer, options: [], range: buffer.fullRange) {
+                        if result.range.location != NSNotFound {
+                            lastImportLine = i
+                        }
                     }
                 }
             }
-        }
-        let lastWordRegex = try! NSRegularExpression(pattern: "\\s*([\\w.]+)\\W*$", options: [])
-        if let range = invocation.buffer.selections[0] as? XCSourceTextRange {
+
             if let currentLine = invocation.buffer.lines[range.start.line] as? String {
                 if let result = lastWordRegex.firstMatch(in: currentLine, options: [], range: currentLine.fullRange) {
                     if result.numberOfRanges > 1 {
